@@ -10,9 +10,8 @@ body {
 /* Style the header */
 .header {
   grid-area: header;
- background: rgb(53,106,199);
-background: linear-gradient(90deg, rgba(53,106,199,1) 6%, rgba(72,171,203,1) 88%);
-border-radius:2px;
+ background: red;
+ qborder-radius:2px;
   padding: 30px;
   text-align: center;
   font-size: 35px;
