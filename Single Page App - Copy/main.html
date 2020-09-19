@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Single Page App</title>
+	
+    <meta charset="utf-8">
+     <!-- import the webpage's stylesheet -->
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .appUI{display:none}
+    </style>
+	<script src="script.js" defer></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+ </head>
+
+<body onload="showUI1">
+   
+    <div id="ui1" class="appUx">
+
+		 
+			
+      
+       
+        <img
+          src="https://www.agilent.com/cs/promotions/images/CrossLab_Wordmark_Swingline_Color_RGB.png"
+          alt="agilent logo"
+          style="width:300px;align-content: center;vertical-align: middle;padding: 30px;margin-bottom:10px;"
+        /><br />
+        <div class="main-btns-panel">
+			        <h1 class="left-h1"></h1>
+
+          <br />
+          <button
+            class="button pulse"
+            id="btn-refresh4"
+            style="margin-top: 0px;font-weight: 500;font-size:13px;"
+          >
+            Contact Support
+          </button>
+        </div>
+    <button type="button"  class="button pulse" onclick="showUI2()">Show UI 2</button> 
+   
+        
+    
+</div>
+    <div id="ui2" class="appUI">
+        <h2>This is UI 2</h2>
+        <p>Nothing to see here...move it along....go on..git</p>
+		 <select id="mySelect" class="mySelect" onchange="showUI3()">
+   <option></option>
+    <option id="1" label="Arizona State" value="https://asu.ilabsolutions.com/" name="asu"></option>
+    <option id="2" label="Augusta Uni" value="https://au.ilabsolutions.com/"></option>
+    <option id="3" label="Baylor College" value="https://bcm.ilabsolutions.com/"></option>
+    <option id="4" label="Vanderbilt University" value="https://vu.ilabsolutions.com/"></option>
+
+ 
+
+  </select>
+  
+        <button type="button"  class="button pulse" onclick="showUI3()">Go to UI3</button>
+    </div>
+
+    <div id="ui3" class="appUI">
+        <h2>This is UI 3: Wikipedia Article</h2>
+        <button type="button"  class="button pulse" onclick="showUI1()">Back to Main UI</button><br>
+       <button type="button"  class="button pulse" onclick="showUI2()">Show UI 2</button> 
+        <button type="button"  class="button pulse" onclick="showUI3()">Show UI 3</button> 
+        <button type="button"  class="button pulse" onclick="showUI4()">Show UI 4</button> 
+         <button type="button"  class="button pulse" onclick="showUI5()">Show UI 5</button> 
+          <button type="button"  class="button pulse" onclick="showUI6()">Show UI 6</button> 
+    </div>
+    
+    <div id="ui4" class="appUI">
+        <h2>This is UI 4: Two Pics</h2>
+       
+        <div>
+  
+ 
+  <select id="mySelect2" class="mySelect" onchange="showForm2()" >
+   <option></option>
+    <option id="a" label="Uni of Virginia" value="uva"></option>
+    <option id="b" label="MSKCC" value="mskcc"></option>
+    <option id="c" label="NYUMC" value="nyumc"></option>
+    <option id="d" label="WUSTL" value="wustl"></option>
+
+
+
+  </select>
+    </div>
+  
+  <form id="extCores" >
+  
+ 
+<select id="EXT" onchange="showForm3()">
+    <select id="EXTuva" class="EXTCoreF">
+   <option></option>
+    <option id="x1" label="FlowJO" value="/sc/0001/dna-sequencing-core?tab=services"></option>
+    <option id="y1" label="Mass Spec" value="/sc/0002/dna-sequencing-core?tab=services"></option>
+    <option id="z1" label="Ray-X" value="/sc/0003/dna-sequencing-core?tab=services"></option>
+    <option id="w1" label="Bazinga" value="/sc/0004/dna-sequencing-core?tab=services"></option>
+
+   </select> 
+   <select id="EXTmskcc" class="EXTCoreF">
+   <option></option>
+    <option id="1x" label="Cell Plur" value="/sc/0005/dna-sequencing-core?tab=services"></option>
+    <option id="1y" label="MSKCC Flow" value="/sc/0006/dna-sequencing-core?tab=services"></option>
+    <option id="1z" label="DNA-X" value="/sc/0007/dna-sequencing-core?tab=services"></option>
+    <option id="1w" label="Vaccines" value="/sc/0008/dna-sequencing-core?tab=services"></option>
+
+   </select>
+   <select id="EXTnyumc" class="EXTCoreF">
+   <option></option>
+    <option id="1x1" label="NYUMC Med Flow" value="/sc/0009/dna-sequencing-core?tab=services"></option>
+    <option id="1y1" label="Mass Spec NYUMC" value="/sc/0010/dna-sequencing-core?tab=services"></option>
+    <option id="1z1" label="Ray-X Triple NY" value="/sc/0011/dna-sequencing-core?tab=services"></option>
+    <option id="1w1" label="NY Bazinga" value="/sc/0012/dna-sequencing-core?tab=services"></option>
+
+   </select>
+   
+   <select id="EXTwustl" class="EXTCoreF">
+   <option></option>
+    <option id="x22" label="FlowJO WUSTL" value="/sc/0013/dna-sequencing-core?tab=services"></option>
+    <option id="y22" label="Mass Spec WUSTL" value="/sc/0014/dna-sequencing-core?tab=services"></option>
+    <option id="z22" label="Ray-X Locked" value="/sc/0015/dna-sequencing-core?tab=services"></option>
+    <option id="w22" label="Bazinga WUSTL" value="/sc/0016/dna-sequencing-core?tab=services"></option>
+
+   </select>
+    </select>
+		</form>
+     <button type="button" class="button pulse" onclick="showUI1()">Back to Main UI</button><br>
+   </div>
+    <div id="ui5" class="appUI">
+        <h2>This is UI 2</h2>
+        <button type="button" onclick="showUI1()">Back to Main UI</button>
+        <p>Nothing to see here...move it along....go on..git</p>
+        <button type="button" onclick="showUI1()">Back to Main UI</button>
+    </div>
+    <div id="ui6" class="appUI">
+        <h2>This is UI 6</h2>
+        
+        <p>Nothing to see here...move it along....go on..git</p>
+        <button type="button" class="button pulse" onclick="showUI1()">Back to Main UI</button>
+    </div>
+   <br>
+      
+     
+    <script>
+       
+    </script>
+</body>
+</html>
